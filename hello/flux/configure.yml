@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: gitops-hello
+  namespace: hello-flux
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
+spec:
+  interval: 1m
+  releaseName: hello-arc
+  chart:
+    spec:
+      chart: ./hello/chart
+  values:
+    replicaCount: 1

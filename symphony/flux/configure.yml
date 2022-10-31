@@ -1,0 +1,13 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: symphony
+  namespace: default
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
+spec:
+  interval: 1m
+  releaseName: symphony-flux
+  chart:
+    spec:
+      chart: ./symphony/chart

@@ -1,0 +1,6 @@
+apiVersion: v2
+appVersion: 0.38.1-amd64
+description: A Helm chart for Kubernetes
+name: voe
+type: application
+version: 0.38.0-amd64

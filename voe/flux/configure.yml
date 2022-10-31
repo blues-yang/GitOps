@@ -1,0 +1,13 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: webmodule
+  namespace: default
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
+spec:
+  interval: 1m
+  releaseName: voe-flux
+  chart:
+    spec:
+      chart: ./voe/chart

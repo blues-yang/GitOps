@@ -1,0 +1,21 @@
+# Default values for voe.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+symphonyAgentVersion: "0.38.0"
+image:
+  pullPolicy: Always
+  image: possprod.azurecr.io/webmodule
+  tag: "0.38.0-amd64"
+webmodule:
+  videoSource: opencv
+storage:
+  storageAccount: "st4acc4blues"
+  storageContainer: "st-container-blues"
+  subscriptionId: "87578e1f-28a7-488b-9192-6f1b7e851b4f"
+customvision:
+  endpoint: "https://westus2.api.cognitive.microsoft.com/"
+  trainingKey: "e76bb39b72c24624b9b97007d0e50474"
+servicePrincipal:
+  tenantId:  "305ae7bf-a3e5-40d3-b860-fa23510a7fd8"
+  clientId: "83ce1d35-d72a-4b74-88ee-b2efc066b479"
+  clientSecret: "cTT8Q~ZDN_gtaNCUmB0ISoXYoBVo.7KZCnnUodBs"
